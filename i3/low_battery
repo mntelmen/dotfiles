@@ -1,0 +1,7 @@
+#!/bin/bash
+var=0
+
+if [ $var eq 0 ]; then
+  notify-send 'Battery Low!' 'Connect your charger dumb ass.' --icon=error
+  $var=-1
+fi

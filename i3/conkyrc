@@ -1,0 +1,44 @@
+background        no
+out_to_console 	  yes
+out_to_x	  no
+update_interval	  1
+total_run_times	  0
+short_units	  yes
+pad_percents	  3
+times_in_seconds true
+
+override_utf8_locale yes
+
+TEXT
+[
+  {"full_text": "▼ ${downspeed wlan0}", "separator":false, "color":"\#00fff2"},
+  {"full_text": "▲ ${upspeed wlan0}", "separator":false, "color":"\#ff0000"},
+
+  {"full_text": "${wireless_essid wlan0} ${wireless_link_qual wlan0}dBm", "separator":false, "color":"\#33cc99"},
+#  {"full_text": "${execi 100 curl -s "http://whatsmyip.net" -o ~/.cache/externalip.html -A "Mozilla/4.0"}", "color": "\#ffffff"},
+#  {"full_text": "IP:${execi 100 grep -o "IP</acronym> Address is <input type=\"text\" value=\"[^\"]*\" />" ~/.cache/externalip.html | cut -f 6 -s --delimiter=" " | cut -f 2 -s --delimiter="\""}", "separator":false, "separator_block_width":1, "color":"\#fffff"},
+  {"full_text": "${addr wlan0}", "separator":false},
+  {"full_text": "root ${fs_free /}", "separator":false,  "color":"\#B9F990"},
+  {"full_text": "Mem $mem", "separator":false,  "color":"\#B58900"},
+  {"full_text": "CPU $cpu% ${execi 30 sensors | grep 'Core 0' | cut -c 18-19}°C", "separator":false,  "color":"\#00A9B5"},
+  {"full_text": 
+		${if_match ${format_time $battery_time "\h"}>0} 
+			"${format_time $battery_time "\hh \mm"}"
+		${else}
+			"${format_time $battery_time "\mm"}"
+		${endif} , "separator":false, "separator_block_width":0, "color" : "\#f268bd2"
+  },
+  {"full_text": " $battery", "separator": false, "color" : 
+    ${if_match ${battery_percent}>10}
+      "\#f268bd2"
+    ${else}
+      "\#FF173E"
+#      "${exec ~/.config/i3/low_battery}"
+    ${endif} },
+  {"full_text": "${exec ~/.config/i3/keyboard_layout}", "separator":false, "color" : "\#ffffff" },
+  {"full_text": "♪ ${exec amixer get Master | grep -m 1 '%' | awk -F "[][]" '{print $2}'}", "separator":false, "color":"\#268BD2"},
+  {"full_text": "${time %a,%b %d} ${time %H:%M:%S} ","color": "\#2fdc57"}
+],
+
+
+#See 

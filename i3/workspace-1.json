@@ -1,0 +1,80 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 881,
+       "width": 950,
+       "x": 0,
+       "y": 19
+    },
+    "name": "Arch",
+    "percent": 0.64,
+    "swallows": [
+       {
+        "class": "^google-chrome-stable$",
+        "instance": "^google-chrome-stable$",
+        "title": "^Arch Linux Google Chrome$",
+        "transient_for": "^$",
+        "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.36,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 314,
+               "width": 574,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Xfce4-terminal$",
+                "instance": "^xfce4-terminal$",
+                "title": "^Terminal - root@blackpearl:~$",
+                "transient_for": "^$",
+                "window_role": "^xfce4-terminal-1466255399-1825903333$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 314,
+               "width": 574,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Xfce4-terminal$",
+                "instance": "^xfce4-terminal$",
+                "title": "^Terminal$",
+                "transient_for": "^$",
+                "window_role": "^xfce4-terminal-1466255401-899655342$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
