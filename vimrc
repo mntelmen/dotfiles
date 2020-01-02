@@ -222,3 +222,7 @@ set foldlevel=2
 
 " fix indentline breaking qoutes in json files
 autocmd Filetype json let g:indentLine_setConceal = 0
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
