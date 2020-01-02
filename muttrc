@@ -10,7 +10,7 @@
  set from = "mntelmen@gmail.com"  
  set realname = "Telmen Baldansuren"  
  set imap_user = "mntelmen@gmail.com"  
- set imap_pass = "Telmen976$"  
+ set imap_pass = "********"  
  
  #My Editor  
  set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'  
